@@ -1,4 +1,10 @@
-(defun start-flashcards ()
+;;; flashcards.el --- Test a user on a file of pre-formatted flashcards  -*- lexical-binding: t; -*-
+
+;; Author: Isaac Leonard
+;; Version: 1.0
+
+;;; Code:
+(defun flashcards ()
   "Begins testing the user with flashcards"
   (interactive)
   (message-if-not-nil (catch 'parse-error
@@ -87,3 +93,6 @@
 (defun message-if-not-nil (message)
   "Displays the argument if it is not nil"
   (if (not (not message)) (message message)))
+
+(provide 'flashcards)
+;;; flashcards.el ends here
